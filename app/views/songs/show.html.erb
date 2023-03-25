@@ -4,4 +4,6 @@
     <p><%= @song.year %></p>
     <p><%= @song.category %></p>
   </div>
+  <%= link_to "back to index", songs_path, class: "btn btn-warning" %>
+  <%= link_to "edit song", edit_song_path, class: "btn btn-primary" %>
 </div>

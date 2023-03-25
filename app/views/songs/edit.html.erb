@@ -1,0 +1,12 @@
+<div class="container py-4 d-flex">
+  <%= form_for(@song) do |f| %>
+      <%= f.text_field :title %>
+      <%= f.number_field :year %>
+      <%= f.text_field :category %>
+      <%= f.submit %>
+  <% end %>
+  <%= link_to "Delete",
+    song_path(@song),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"
+  %>
+</div>

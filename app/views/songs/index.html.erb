@@ -1,7 +1,12 @@
-<h1>Index Page</h1>
+<div class="container py-4">
+  <h1>Index Page</h1>
 
-<ol>
-  <% @songs.each do |song| %>
-  <li><%= link_to song.title, song_path(song)%></li>
-  <% end %>
-</ol>
+  <ol>
+    <% @songs.each do |song| %>
+    <li><%= link_to song.title, song_path(song)%></li>
+    <% end %>
+  </ol>
+
+  <%= link_to "back to Home", root_path, class: "btn btn-primary" %>
+  <%= link_to "Add a new song", new_song_path, class: "btn btn-warning" %>
+</div>
